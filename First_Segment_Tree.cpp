@@ -41,7 +41,7 @@ int update(int node, int L, int R, int idx, int val){
 			update(2*node, L, mid, idx, val);
 		}
 		else{
-			update(2*mid+1, mid+1, R, idx, val);
+			update(2*node+1, mid+1, R, idx, val);
 		}
 
 		ST[node] = ST[2*node] + ST[2*node+1];
